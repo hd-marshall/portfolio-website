@@ -1,0 +1,468 @@
+:root {
+    --prim-clr: #000000;
+    --second-clr: #cd0300;
+    --third-clr: #232323;
+    --text-clr: whitesmoke;
+
+    --font-hero: 'monospace', monospace;
+    --font-text: 'Space Mono', monospace;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: var(--ff-text);
+    color: var(--prim-clr);
+    font-size: 1.125rem;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+section{
+    padding: 2.5em 1em;
+}
+
+img {
+    max-width: 100%;
+    height: 40vh;
+}
+
+/* Typeography */
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span,
+i, 
+li, 
+button {
+    font-family: var(--font-text);
+    color: var(--text-clr);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+/* Dark and Light Mode */
+.dark {
+    --prim-clr: #000000;
+    --second-clr: #cd0300;
+    --third-clr: #232323;
+    --text-clr: whitesmoke;
+}
+
+.light {
+    --prim-clr: whitesmoke;
+    --second-clr: #cd0300;
+    --third-clr: #494949;
+    --text-clr: #000000;
+}
+
+@media all and (min-width: 750px) {
+
+    /* Nav */
+    header {
+        padding: 1.5em 0em 1.5em;
+        background: var(--prim-clr);
+    }
+
+    nav a {
+        color: var(--text-clr);
+        text-decoration: none;
+        padding: 0 1.5em 0;
+        position: relative;
+    }
+
+    .header-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: currentColor;
+
+        transform: scaleX(0);
+        transition: transform 150ms ease-in;
+    }
+
+    .header-link:hover::after {
+        transform: scaleX(0.6);
+    }
+
+    /* Hero */
+    .hero {
+        position: relative;
+        background-color: rgb(72, 72, 72);
+        background-image: url(../img/hero.jpg);
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 90vh;
+    }
+
+    .hero h1 {
+        padding: 1em;
+        position: absolute;
+        top: 15%;
+        right: 53%;
+    } 
+
+    .hero-clock {
+        position: absolute;
+        font-size: 1.2em;
+        padding: 1em;
+        top: 25%;
+        right: 53%;
+    }
+
+    /* Projects */
+    .project {
+        background: var(--prim-clr);
+    }
+
+    .project h2 {
+        font-size: 1.5em;
+        padding: 0.5em 0 1em;
+    }
+
+    .project h3 {
+        padding: 1em;
+    }
+
+    .project p {
+        font-size: 1em;
+        padding: 0.8em;
+    }
+
+    .head-project{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .project-1 {
+        background: var(--third-clr);
+        float: left;
+        width: 33%;
+        margin: 1em;
+    }
+
+    .project-2 {
+        background: var(--third-clr);
+        float: right;
+        width: 33%;
+        margin: 1em;
+    }
+
+    .project-3 {
+        background: var(--third-clr);
+        float: right;
+        width: 33%;
+        margin: 1em;
+    }
+
+    /* About me */
+    .connect {
+        background-color: var(--third-clr);
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about-me {
+        float:left;
+        width: 50%;
+        margin: 1em;
+    }
+
+    .hire-me {
+        float:left;
+        width: 50%;
+        margin: 1em;
+    }
+        
+    .about-me h2 {
+        background: var(--prim-clr);
+        padding: 0.5em 0 0.5em;
+        margin: 0.5em;
+    }
+
+    .about-me p {
+        font-size: 0.9em;
+        line-height: 1.5em;
+        padding: 1em;
+    }
+
+    .hire-me h2 {
+        background-image: url(../img/body-bg.jpg);
+        background-color: #fff;
+        background-blend-mode: multiply;
+        padding: 0.5em 0 0.5em;
+        margin: 0.5em;
+        margin-bottom: 3em;
+    }
+
+    .hire-me a{
+        text-decoration: none;
+    }
+
+    button {
+        margin: 0 0.5em 0;
+        cursor: pointer;
+        border: 0;
+        background: var(--prim-clr);
+        color: var(--text-clr);
+        padding: 1em 2.5em 1em;
+        width: 80%;
+        margin: 0.5em;
+        font-size: 1em;
+        position: relative;
+        z-index: 1;
+    }
+
+    button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #4e4e4e;
+
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 200ms ease-in;
+    }
+
+    button:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    /*Bottom Nav - Contact */
+    footer {
+        padding: 1.2em 0em 1.2em;
+        background-color: var(--prim-clr);
+    }
+
+    footer a {
+        color: var(--text-clr);
+        text-decoration: none;
+        padding: 0 1.5em 0;
+        position: relative;
+    }
+
+    .contact-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: currentColor;
+
+        transform: scaleX(0);
+        transition: transform 200ms ease-in;
+    }
+
+    .contact-link:hover::after {
+        transform: scaleX(0.6);
+    }
+
+}
+
+@media all and (max-width: 750px) {
+
+    /* Nav */
+    header {
+        padding: 1.5em 0em 1.5em;
+        background: var(--prim-clr);
+    }
+
+    nav a {
+        color: var(--text-clr);
+        text-decoration: none;
+        padding: 0 1.5em 0;
+        position: relative;
+    }
+
+    .header-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: currentColor;
+
+        transform: scaleX(0);
+        transition: transform 150ms ease-in;
+    }
+
+    .header-link:hover::after {
+        transform: scaleX(0.6);
+    }
+
+    /* Hero */
+    .hero {
+        background-color: rgb(72, 72, 72);
+        background-image: url(../img/hero.jpg);
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 90vh;
+    }
+
+    .hero h1 {
+        padding: 1em;
+    } 
+
+    .hero-link {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    /* Projects */
+    .project {
+        background: var(--prim-clr);
+    }
+
+    .project h2 {
+        font-size: 1.5em;
+        padding: 0.5em 0 1em;
+    }
+
+    .project h3 {
+        padding: 1em;
+    }
+
+    .project p {
+        font-size: 1em;
+        padding: 0.8em;
+    }
+
+    .project-1{
+        background: var(--third-clr);
+        margin:1em 1em 2em;
+    }
+
+    .project-2{
+        background: var(--third-clr);
+        margin:1em 1em 2em;
+    }    
+
+    .project-3{
+        background: var(--third-clr);
+        margin:1em 1em 2em;
+    }
+
+    /* About me */
+    .connect {
+        background-color: var(--third-clr);
+    }
+
+    .about-me h2 {
+        background: var(--prim-clr);
+        padding: 0.5em 0 0.5em;
+        margin: 0.5em;
+    }
+
+    .about-me p {
+        font-size: 0.9em;
+        line-height: 1.5em;
+        padding: 1em;
+    }
+
+    .hire-me h2 {
+        background-image: url(../img/body-bg.jpg);
+        background-color: #fff;
+        background-blend-mode: multiply;
+        padding: 0.5em 0 0.5em;
+        margin: 0.5em;
+    }   
+
+    .hire-me a {
+        text-decoration: none;
+    }
+
+    button {
+        margin: 0 0.5em 0;
+        cursor: pointer;
+        border: 0;
+        background: var(--prim-clr);
+        color: var(--text-clr);
+        padding: 1em 2.5em 1em;
+        width: 80%;
+        margin: 0.5em;
+        font-size: 1em;
+        position: relative;
+        z-index: 1;
+    }
+
+    button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #4e4e4e;
+
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 200ms ease-in;
+    }
+
+    button:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    /*Bottom Nav - Contact */
+    footer {
+        padding: 1.2em 0em 1.2em;
+        background-color: var(--prim-clr);
+    }
+
+    footer a {
+        color: var(--text-clr);
+        text-decoration: none;
+        padding: 0 1.5em 0;
+        position: relative;
+    }
+
+    .contact-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3px;
+        background: currentColor;
+
+        transform: scaleX(0);
+        transition: transform 200ms ease-in;
+    }
+
+    .contact-link:hover::after {
+        transform: scaleX(0.6);
+    }
+
+}

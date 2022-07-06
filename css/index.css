@@ -65,6 +65,26 @@ p {
     transition: transform 500ms ease-in;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--third-clr);
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+@supports (scrollbar-color: rgb(0, 0, 0) var(--third-clr)) {
+    * {
+        scrollbar-color: rgb(0, 0, 0) var(--third-clr);
+        scrollbar-width: auto;
+    }
+}
+
 @media all and (min-width: 850px) {
 
     /* Nav */
@@ -78,6 +98,7 @@ p {
         text-decoration: none;
         padding: 0 1.5em 0;
         position: relative;
+        font-size: 0.9em;
     }
 
     .dark-mode-toggle {
@@ -108,7 +129,7 @@ p {
     /* Hero */
     .hero {
         position: relative;
-        background-color: rgb(72, 72, 72);
+        background-color: rgb(106, 105, 105);
         background-image: url(../img/hero.jpg);
         background-blend-mode: multiply;
         background-attachment: fixed;
@@ -117,7 +138,7 @@ p {
     }
 
     .hero h1 {
-        padding: 1em;
+        padding: 1.2em;
         position: absolute;
         top: 15%;
         right: 53%;
@@ -129,11 +150,12 @@ p {
         font-size: 1.2em;
         padding: 1em;
         top: 25%;
-        right: 53%;
+        right: 54%;
     }
     
     .hero-clock span {
         color: whitesmoke;
+        font-size: 1em;
     }
 
     /* Projects */
@@ -150,49 +172,112 @@ p {
         padding: 1em;
     }
 
-    .skills {
-        text-decoration: underline;
-    }
-
     .project p {
         font-size: 1em;
         padding: 0.8em;
     }
 
-    .head-project{
+    .project-column {
         display: flex;
         flex-direction: row;
     }
 
-    .project-1 {
+    .column1 {
         background: var(--third-clr);
         float: left;
         width: 33%;
         margin: 1em;
     }
 
-    .project-2 {
+    .column2 {
         background: var(--third-clr);
         float: right;
         width: 33%;
         margin: 1em;
     }
 
-    .project-3 {
+    .column3 {
         background: var(--third-clr);
         float: right;
         width: 33%;
         margin: 1em;
     }
 
-    .project-button {
+    .col-img {
+        background-color: #0e0d0d;
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        height: 350px;
+        margin: auto;
+        width: 85%;
+    }
+
+    .col-img img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        opacity: 0.5;
+        border: black solid 1px;
+        transition: ease-in 200ms
+    }
+
+    .col-img img:hover {
+        cursor: pointer;
+        box-shadow: 0 10px 20px rgb(0, 0, 0);
+        opacity: 0.8;
+    }
+
+    .border-button {
         display: flex;
         justify-content: space-around;
+        margin-bottom: 4vh;
     }
 
-    .project-button button {
-        width: 80%;
-        font-size: 0.8em;
+    .border-button button {
+        position: relative;
+        margin: 1em 0.5em 0;
+        cursor: pointer;
+        border: 0;
+        background: var(--prim-clr);
+        color: var(--text-clr);
+        width: 35%;
+        height: 40px;
+        font-size: 0.7em;
+    }
+
+
+    /* Modals */
+    .bg-modal {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 99;
+    }
+
+    .modal-mining {
+        width: 700px;
+        height: 400px;
+        background-color: black;
+        border: white solid 1px;
+        position: relative;
+    }
+    
+    .close {
+        position: absolute;
+        top: 3;
+        right: 15px;
+        color: white;
+        font-size: 2em;
+        transform: rotate(45deg);
+        cursor: pointer;
     }
 
     /* About me */

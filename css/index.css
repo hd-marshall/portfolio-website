@@ -1,4 +1,4 @@
-:root {
+    :root {
     --prim-clr: whitesmoke;
     --second-clr: #cd0300;
     --third-clr: #494949;
@@ -225,7 +225,7 @@ p {
     .col-img img:hover {
         cursor: pointer;
         box-shadow: 0 10px 20px rgb(0, 0, 0);
-        opacity: 0.8;
+        opacity: 0.9;
     }
 
     .border-button {
@@ -244,40 +244,29 @@ p {
         width: 35%;
         height: 40px;
         font-size: 0.7em;
+        border-radius: 5px;
+        z-index: 1;
     }
 
-
-    /* Modals */
-    .bg-modal {
+    .project-button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: fixed;
-        overflow: auto;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: none;
-        z-index: 99;
+        background: var(--clr-button);
+        border-radius: 5px;
+
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 200ms ease-in;
     }
 
-    .modal-mining {
-        width: 700px;
-        height: 400px;
-        background-color: black;
-        border: white solid 1px;
-        position: relative;
-    }
-    
-    .close {
-        position: absolute;
-        top: 3;
-        right: 15px;
-        color: white;
-        font-size: 2em;
-        transform: rotate(45deg);
-        cursor: pointer;
+    .project-button:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 
     /* About me */
@@ -339,6 +328,7 @@ p {
         font-size: 1em;
         position: relative;
         z-index: 1;
+        border-radius: 10px;
     }
 
     .big-button::after {
@@ -349,6 +339,7 @@ p {
         width: 100%;
         height: 100%;
         background: var(--clr-button);
+        border-radius: 10px;
 
         z-index: -1;
         transform: scaleX(0);
@@ -391,6 +382,151 @@ p {
         transform: scaleX(0.6);
     }
 
+    /* Modals */
+    .mine-modal {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 99;
+    }
+
+    .cake-modal {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 99;
+    }
+
+    .web-modal {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        overflow: auto;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 99;
+    }
+
+    .modal-content {
+        width: 700px;
+        height: 400px;
+        background-color: black;
+        border: white solid 1px;
+        position: relative; 
+    }
+    
+    .close {
+        position: absolute;
+        top: 3;
+        right: 15px;
+        color: white;
+        font-size: 2em;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+
+    .close-close {
+        position: absolute;
+        top: 3;
+        right: 15px;
+        color: white;
+        font-size: 2em;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+
+    .close-close2 {
+        position: absolute;
+        top: 3;
+        right: 15px;
+        color: white;
+        font-size: 2em;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+
+    .mine-grid {
+        display: flex;
+    }
+
+    .mine-youtube {
+        height: 100%;
+        width: 50%;
+        display: flex;
+    }
+
+    .mine-youtube iframe {
+        position: fixed;
+        top: 50%;
+        left: 36%;
+        transform: translate(-50%, -50%);
+    }
+
+    .mine-info {
+        display: block;
+        width: 50%;
+        text-align: center;
+    }
+
+    .mine-info h2 {
+        padding: 3em 1em 0 1em;
+        font-size: 1.2em;
+    }
+
+    .mine-info p {
+        padding-top: 1em;
+        font-size: 0.7em;
+        text-align: center;
+        margin: auto;
+    }
+
+    .mine-info h4 {
+        padding-top: 1em;
+        text-decoration: underline;
+    }
+
+    .mine-info ul {
+        text-align: center;
+    }
+
+    .web-grid {
+        display: flex;
+    }
+
+    .web-img {
+        height: 100%;
+        width: 50%;
+        display: flex;
+    }
+
+    .web-img img {
+        width: 300px;
+        height: 350px
+    }
+
+    .web-info {
+        display: block;
+        width: 50%;
+        text-align: center;
+    }
 }
 
 @media all and (max-width: 850px) {

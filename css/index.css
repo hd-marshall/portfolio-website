@@ -187,6 +187,7 @@ p {
         float: left;
         width: 33%;
         margin: 1em;
+        border-radius: 10px 0 5px 0;
     }
 
     .column2 {
@@ -194,6 +195,7 @@ p {
         float: right;
         width: 33%;
         margin: 1em;
+        border-radius: 0 5px 0 5px;
     }
 
     .column3 {
@@ -201,6 +203,7 @@ p {
         float: right;
         width: 33%;
         margin: 1em;
+        border-radius: 5px 0 10px 0;
     }
 
     .col-img {
@@ -210,6 +213,7 @@ p {
         height: 350px;
         margin: auto;
         width: 85%;
+        position: relative;
     }
 
     .col-img img {
@@ -220,6 +224,15 @@ p {
         opacity: 0.5;
         border: black solid 1px;
         transition: ease-in 200ms
+    }
+
+    .col-img i {
+        position: absolute;
+        bottom: 25px;
+        width: 100%;  
+        z-index: 2;
+        opacity: 1;
+        font-size: 30px;
     }
 
     .col-img img:hover {
@@ -383,150 +396,59 @@ p {
     }
 
     /* Modals */
-    .mine-modal {
+    .modal-1, .modal-2, .modal-3 {
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: fixed;
         overflow: auto;
-        top: 0;
-        display: flex;
+
         justify-content: center;
         align-items: center;
+
         display: none;
-        z-index: 99;
     }
 
-    .cake-modal {
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: fixed;
-        overflow: auto;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: none;
-        z-index: 99;
-    }
-
-    .web-modal {
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        position: fixed;
-        overflow: auto;
-        top: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        display: none;
-        z-index: 99;
-    }
-
-    .modal-content {
-        width: 700px;
+    .content-1, .content-2, .content-3 {
         height: 400px;
-        background-color: black;
-        border: white solid 1px;
-        position: relative; 
+        width: 60%;
+        padding: 20px;
+        border: 1px solid white;
+        background-color: #000000;
+        box-shadow: 0 2px 3px 0 rgba(240, 240, 240, 0.5);
+        position: relative;
     }
-    
-    .close {
+
+    .close-1, .close-2, .close-3 {
         position: absolute;
-        top: 3;
-        right: 15px;
-        color: white;
+        top: 0;
+        right: 0.3em;
         font-size: 2em;
+        font-weight: bold;
         transform: rotate(45deg);
         cursor: pointer;
     }
 
-    .close-close {
-        position: absolute;
-        top: 3;
-        right: 15px;
-        color: white;
-        font-size: 2em;
-        transform: rotate(45deg);
-        cursor: pointer;
-    }
-
-    .close-close2 {
-        position: absolute;
-        top: 3;
-        right: 15px;
-        color: white;
-        font-size: 2em;
-        transform: rotate(45deg);
-        cursor: pointer;
-    }
-
-    .mine-grid {
+    .mine-grid{
         display: flex;
     }
 
-    .mine-youtube {
-        height: 100%;
+    .mine-vid {
         width: 50%;
-        display: flex;
     }
 
-    .mine-youtube iframe {
-        position: fixed;
-        top: 50%;
-        left: 36%;
-        transform: translate(-50%, -50%);
-    }
-
-    .mine-info {
-        display: block;
+    .mine-text {
         width: 50%;
-        text-align: center;
     }
 
-    .mine-info h2 {
-        padding: 3em 1em 0 1em;
-        font-size: 1.2em;
+    .mine-text h2 {
+        font-size: 1.1em;
+        padding: 1em 0 1em 0;
     }
 
-    .mine-info p {
-        padding-top: 1em;
-        font-size: 0.7em;
-        text-align: center;
-        margin: auto;
-    }
-
-    .mine-info h4 {
-        padding-top: 1em;
-        text-decoration: underline;
-    }
-
-    .mine-info ul {
-        text-align: center;
-    }
-
-    .web-grid {
-        display: flex;
-    }
-
-    .web-img {
-        height: 100%;
-        width: 50%;
-        display: flex;
-    }
-
-    .web-img img {
-        width: 300px;
-        height: 350px
-    }
-
-    .web-info {
-        display: block;
-        width: 50%;
-        text-align: center;
-    }
 }
 
 @media all and (max-width: 850px) {

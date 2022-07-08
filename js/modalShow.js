@@ -1,27 +1,32 @@
-const miningOpen = document.getElementById("mining-click");
-const cakeOpen = document.getElementById("cake-click");
-const webOpen = document.getElementById("web-click");
-
-miningOpen.addEventListener('click', function() {
-    document.querySelector('.mine-modal').style.display = 'flex';
+//First Modal - Crypto 
+document.getElementById('mining-click').addEventListener('click',
+  function() {
+    document.querySelector('.modal-1').style.display = 'flex';
 });
 
-document.querySelector('.close').addEventListener('click', function (){
-    document.querySelector('.mine-modal').style.display = 'none';
+document.getElementById('close-1').addEventListener('click',
+  function() {
+    document.querySelector('.modal-1').style.display = 'none';
 });
 
-cakeOpen.addEventListener('click', function() {
-    document.querySelector('.cake-modal').style.display = 'flex';
+//Second Modal - Sweets 
+document.getElementById('cake-click').addEventListener('click',
+  function() {
+    document.querySelector('.modal-2').style.display = 'flex';
 });
 
-document.querySelector('.close-close').addEventListener('click', function (){
-    document.querySelector('.cake-modal').style.display = 'none';
+document.getElementById('close-2').addEventListener('click',
+  function() {
+    document.querySelector('.modal-2').style.display = 'none';
 });
 
-webOpen.addEventListener('click', function() {
-    document.querySelector('.web-modal').style.display = 'flex';
+//Third Modal - Web 
+document.getElementById('web-click').addEventListener('click',
+  function() {
+    document.querySelector('.modal-3').style.display = 'flex';
 });
 
-document.querySelector('.close-close2').addEventListener('click', function (){
-    document.querySelector('.web-modal').style.display = 'none';
+document.getElementById('close-3').addEventListener('click',
+  function() {
+    document.querySelector('.modal-3').style.display = 'none';
 });

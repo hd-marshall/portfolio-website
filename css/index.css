@@ -90,7 +90,7 @@ p {
     /* Nav */
     header {
         padding: 1.5em 0em 1.5em;
-        background: var(--prim-clr);
+        background: #000;
     }
 
     nav a {
@@ -404,7 +404,6 @@ p {
         left: 0;
         width: 100%;
         height: 100%;
-        overflow: auto;
 
         justify-content: center;
         align-items: center;
@@ -445,6 +444,62 @@ p {
     }
 
     .mine-text h2 {
+        font-size: 1.1em;
+        text-decoration: underline;
+        padding: 1em 0 1em 0;
+    }
+
+    .mine-text p {
+        font-size: 14px;
+        padding-bottom: 2em;
+    }
+
+    .mine-text h3 {
+        font-size: 0.9em;
+        text-decoration: underline;
+        padding: 1em 0 0 0;
+    }
+    
+    .mine-text ul {
+        display: flex;
+    }
+
+    .mine-text li {
+        padding: 0 2em 0 1em;
+        list-style: none;
+        font-size: 30px;
+    }
+
+    .sweet-grid{
+        display: flex;
+    }
+
+    .sweet-media {
+        width: 50%;
+    }
+
+    .sweet-text {
+        width: 50%;
+    }
+
+    .sweet-text h2 {
+        font-size: 1.1em;
+        padding: 1em 0 1em 0;
+    }
+
+    .web-grid{
+        display: flex;
+    }
+
+    .web-media {
+        width: 50%;
+    }
+
+    .web-text {
+        width: 50%;
+    }
+
+    .web-text h2 {
         font-size: 1.1em;
         padding: 1em 0 1em 0;
     }

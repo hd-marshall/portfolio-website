@@ -288,7 +288,7 @@ p {
 
     .project-2 {
         background-color: #000;
-        display: none;
+        display: block;
         transition: ease-in 200ms;
         margin-top: 0;
         padding-top: 0;
@@ -307,6 +307,10 @@ p {
         font-size: 1em;
         padding: 0.8em;
     }
+
+    .project-2 > .project-column {
+        justify-content: center;
+    }   
 
     .project-read {
         position: relative;
@@ -360,6 +364,7 @@ p {
         float:left;
         width: 50%;
         margin: 1em;
+        align-items: center;
     }
 
     .hire-me h2 {
@@ -472,7 +477,37 @@ p {
         display: none;
     }
 
-    .content-1, .content-2, .content-3 {
+    .modal-4 {
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        display: none;
+    }
+
+    .modal-5 {
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 99;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        display: none;
+    }
+
+    .content-1, .content-2, .content-3, .modal-4, .modal-5 {
         height: 400px;
         width: 60%;
         padding: 20px;
@@ -482,7 +517,7 @@ p {
         position: relative;
     }
 
-    .close-1, .close-2, .close-3 {
+    .close-1, .close-2, .close-3, .close-4, .close-5 {
         position: absolute;
         top: 0;
         right: 0.3em;
@@ -546,6 +581,28 @@ p {
     .sweet-text h2 {
         font-size: 1.1em;
         padding: 1em 0 1em 0;
+        text-decoration: underline;
+    }
+
+    .sweet-text p {
+        font-size: 14px;
+        padding-bottom: 2em;
+    }
+
+    .sweet-text h3 {
+        font-size: 0.9em;
+        text-decoration: underline;
+        padding: 1em 0 0 0;
+    }
+    
+    .sweet-text ul {
+        display: flex;
+    }
+
+    .sweet-text li {
+        padding: 0 2em 0 1em;
+        list-style: none;
+        font-size: 30px;
     }
 
     .web-grid{
@@ -563,8 +620,146 @@ p {
     .web-text h2 {
         font-size: 1.1em;
         padding: 1em 0 1em 0;
+        text-decoration: underline;
     }
 
+    .web-text p {
+        font-size: 14px;
+        padding-bottom: 2em;
+    }
+
+    .web-text h3 {
+        font-size: 0.9em;
+        text-decoration: underline;
+        padding: 1em 0 0 0;
+    }
+    
+    .web-text ul {
+        display: flex;
+    }
+
+    .web-text li {
+        padding: 0 2em 0 1em;
+        list-style: none;
+        font-size: 30px;
+    }
+
+    .api-grid{
+        display: flex;
+    }
+
+    .api-media {
+        width: 50%;
+    }
+
+    .api-text {
+        width: 50%;
+    }
+
+    .api-text h2 {
+        font-size: 1.1em;
+        padding: 1em 0 1em 0;
+        text-decoration: underline;
+    }
+
+    .api-text p {
+        font-size: 14px;
+        padding-bottom: 2em;
+    }
+
+    .api-text h3 {
+        font-size: 0.9em;
+        text-decoration: underline;
+        padding: 1em 0 0 0;
+    }
+    
+    .api-text ul {
+        display: flex;
+    }
+
+    .api-text li {
+        padding: 0 2em 0 1em;
+        list-style: none;
+        font-size: 30px;
+    }
+
+    .api-grid{
+        display: flex;
+    }
+
+    .api-media {
+        width: 50%;
+    }
+
+    .api-text {
+        width: 50%;
+    }
+
+    .api-text h2 {
+        font-size: 1.1em;
+        padding: 1em 0 1em 0;
+        text-decoration: underline;
+    }
+
+    .api-text p {
+        font-size: 14px;
+        padding-bottom: 2em;
+    }
+
+    .api-text h3 {
+        font-size: 0.9em;
+        text-decoration: underline;
+        padding: 1em 0 0 0;
+    }
+    
+    .api-text ul {
+        display: flex;
+    }
+
+    .api-text li {
+        padding: 0 2em 0 1em;
+        list-style: none;
+        font-size: 30px;
+    }
+
+    .port-grid{
+        display: flex;
+    }
+
+    .port-media {
+        width: 50%;
+    }
+
+    .port-text {
+        width: 50%;
+    }
+
+    .port-text h2 {
+        font-size: 1.1em;
+        padding: 1em 0 1em 0;
+        text-decoration: underline;
+    }
+
+    .port-text p {
+        font-size: 14px;
+        padding-bottom: 2em;
+    }
+
+    .port-text h3 {
+        font-size: 0.9em;
+        text-decoration: underline;
+        padding: 1em 0 0 0;
+    }
+    
+    .port-text ul {
+        display: flex;
+    }
+
+    .port-text li {
+        padding: 0 2em 0 1em;
+        list-style: none;
+        font-size: 30px;
+    }
 }
 
 @media all and (max-width: 850px) {

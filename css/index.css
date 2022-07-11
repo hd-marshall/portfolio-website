@@ -90,7 +90,7 @@ p {
     /* Nav */
     header {
         padding: 1.5em 0em 1.5em;
-        background: #000;
+        background: var(--prim-clr);
     }
 
     nav a {
@@ -247,6 +247,10 @@ p {
         margin-bottom: 4vh;
     }
 
+    .border-button a {
+        width: 100%;
+    }
+
     .border-button button {
         position: relative;
         margin: 1em 0.5em 0;
@@ -278,6 +282,63 @@ p {
     }
 
     .project-button:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .project-2 {
+        background-color: #000;
+        display: none;
+        transition: ease-in 200ms;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .project-2 h2 {
+        font-size: 1.5em;
+        padding: 0.5em 0 1em;
+    }
+
+    .project-2 h3 {
+        padding: 1em;
+    }
+
+    .project-2 p {
+        font-size: 1em;
+        padding: 0.8em;
+    }
+
+    .project-read {
+        position: relative;
+        margin: 1em 0.5em 0;
+        cursor: pointer;
+        border: 0;
+        background: var(--clr-button);
+        color: var(--text-clr);
+        width: 25%;
+        height: 40px;
+        font-size: 0.7em;
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    .project-read::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--third-clr);
+        border-radius: 5px;
+
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 200ms ease-in;
+    }
+
+    .project-read:hover::after {
         transform: scaleX(1);
         transform-origin: left;
     }

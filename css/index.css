@@ -85,7 +85,7 @@ p {
     }
 }
 
-@media all and (min-width: 850px) {
+@media all and (min-width: 853px) {
 
     /* Nav */
     header {
@@ -196,6 +196,7 @@ p {
         width: 33%;
         margin: 1em;
         border-radius: 0 5px 0 5px;
+        position: relative;
     }
 
     .column3 {
@@ -288,7 +289,7 @@ p {
 
     .project-2 {
         background-color: #000;
-        display: block;
+        display: none;
         transition: ease-in 200ms;
         margin-top: 0;
         padding-top: 0;
@@ -509,7 +510,7 @@ p {
 
     .content-1, .content-2, .content-3, .modal-4, .modal-5 {
         height: 400px;
-        width: 60%;
+        width: 750px;
         padding: 20px;
         border: 1px solid white;
         background-color: #000000;
@@ -572,10 +573,16 @@ p {
 
     .sweet-media {
         width: 50%;
+        position: relative;
     }
 
     .sweet-text {
         width: 50%;
+    }
+
+    .sweet-media img {
+        height: 350px;
+        width: 325px;
     }
 
     .sweet-text h2 {
@@ -611,10 +618,16 @@ p {
 
     .web-media {
         width: 50%;
+        position: relative;
     }
 
     .web-text {
         width: 50%;
+    }
+
+    .web-media img {
+        height: 350px;
+        width: 325px;
     }
 
     .web-text h2 {

@@ -510,7 +510,7 @@ p {
 
     .content-1, .content-2, .content-3, .modal-4, .modal-5 {
         height: 400px;
-        width: 750px;
+        width: 750px    ;
         padding: 20px;
         border: 1px solid white;
         background-color: #000000;

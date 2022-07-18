@@ -11,6 +11,7 @@ document.getElementById('mining-click').addEventListener('click',
 
     document.querySelector('.more-btn').style.display = 'none';
     document.querySelector('.return-projects').style.display = 'block';
+    document.querySelector('.project-column2').style.display = 'none';
 
 });
 
@@ -27,6 +28,7 @@ document.getElementById('cake-click').addEventListener('click',
 
     document.querySelector('.more-btn').style.display = 'none';
     document.querySelector('.return-projects').style.display = 'block';
+    document.querySelector('.project-column2').style.display = 'none';
 
 });
 
@@ -43,6 +45,7 @@ document.getElementById('web-click').addEventListener('click',
 
     document.querySelector('.more-btn').style.display = 'none';
     document.querySelector('.return-projects').style.display = 'block';
+    document.querySelector('.project-column2').style.display = 'none';
 
 });
 

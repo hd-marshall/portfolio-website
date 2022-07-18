@@ -54,6 +54,14 @@ p {
     margin: 0;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Dark and Light Mode */
 .dark {
     --prim-clr: #000000;
@@ -85,21 +93,7 @@ p {
     }
 }
 
-@media all and (min-width: 853px) {
-
     /* Nav */
-    header {
-        padding: 1.5em 0em 1.5em;
-        background: var(--prim-clr);
-    }
-
-    nav a {
-        color: var(--text-clr);
-        text-decoration: none;
-        padding: 0 1.5em 0;
-        position: relative;
-        font-size: 0.9em;
-    }
 
     .dark-mode-toggle {
         width: 5%;
@@ -108,22 +102,43 @@ p {
         border: 0;
         cursor: pointer;
     }
-
-    .header-link::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 3px;
-        background: currentColor;
-
-        transform: scaleX(0);
-        transition: transform 150ms ease-in;
+    
+    header {
+        background-color: #000000;
     }
 
-    .header-link:hover::after {
-        transform: scaleX(0.6);
+    .nav-bar {
+        min-height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .nav-link a {
+        color: #fff;
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+
+    .bars {
+        display: block;
+        width: 25px;
+        height: 5px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: white;
     }
 
     /* Hero */
@@ -175,6 +190,10 @@ p {
     .project p {
         font-size: 1em;
         padding: 0.8em;
+    }
+
+    .project-selection {
+        display: none;
     }
 
     .project-column {
@@ -285,6 +304,11 @@ p {
     .project-button:hover::after {
         transform: scaleX(1);
         transform-origin: left;
+    }
+
+    .back-img img {
+        width: 300px;
+        height: 350px;
     }
 
     /* Prokect-Column2*/
@@ -545,121 +569,163 @@ p {
         transform: scaleX(0.6);
     }
 
-}
-
-@media all and (max-width: 850px) {
+@media (max-width: 860px) {
 
     /* Nav */
-    header {
-        padding: 1.5em 0em 1.5em;
-        background: var(--prim-clr);
+    .hamburger {
+        display: block;
     }
 
-    nav a {
-        color: var(--text-clr);
-        text-decoration: none;
-        padding: 0 1.5em 0;
-        position: relative;
+    .hamburger.active .bars:nth-child(2){
+        opacity: 0;
     }
 
-    .header-link::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
+    .hamburger.active .bars:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bars:nth-child(3){
+        transform:  translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 50px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000000;
         width: 100%;
-        height: 3px;
-        background: currentColor;
-
-        transform: scaleX(0);
-        transition: transform 150ms ease-in;
+        text-align: center;
+        transition: 0.3s;  
+        z-index: 1; 
     }
 
-    .header-link:hover::after {
-        transform: scaleX(0.6);
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
     }
 
     /* Hero */
-    .hero {
-        background-color: rgb(72, 72, 72);
-        background-image: url(../img/hero.jpg);
-        background-blend-mode: multiply;
-        background-attachment: fixed;
-        background-size: cover;
-        height: 90vh;
-    }
-
     .hero h1 {
-        padding: 1em;
+        text-align: center;
+        position: relative;
+        top: auto;
+        right: auto;
     } 
 
-    .hero-link {
-        display: flex;
-        flex-direction: column;
-        padding: 1em;
+    .hero-clock {
+        text-align: center;
+        position: relative;
+        top: auto;
+        right: auto;
     }
 
     /* Projects */
-    .project {
-        background: var(--prim-clr);
+    .project-selection {
+        display: inline;
+        padding: 0.5em 0 0.5em 0;
     }
 
-    .project h2 {
-        font-size: 1.5em;
-        padding: 0.5em 0 1em;
+    .project-column {
+        display: flex;
+        flex-direction: column;
     }
 
-    .project h3 {
-        padding: 1em;
+    .back-flex {
+        display: flex;
+        flex-direction: column;
     }
 
-    .project p {
-        font-size: 1em;
-        padding: 0.8em;
+    .column1 {
+        display: block;
+        width: 92%;
     }
 
-    .project-1{
-        background: var(--third-clr);
-        margin:1em 1em 2em;
+    .crypto-front {
+        display: none;
     }
 
-    .project-2{
-        background: var(--third-clr);
-        margin:1em 1em 2em;
-    }    
+    .crypto-back {
+        display: block;
+    }
 
-    .project-3{
-        background: var(--third-clr);
-        margin:1em 1em 2em;
+    .column2 {
+        display: none;
+        width: 92%;
+    }
+
+    .sweet-front {
+        display: none;
+    }
+
+    .sweet-back {
+        display: block;
+    }
+
+    .column3 {
+        display: none;
+        width: 92%;
+    }
+
+    .personal-front {
+        display: none;
+    }
+
+    .personal-back {
+        display: block;
+    }
+
+    .column4 {
+        display: none;
+        width: 92%;
+    }
+
+    .api-front {
+        display: none;
+    }
+
+    .api-back {
+        display: block;
+    }
+
+    .column5 {
+        display: none;
+        width: 92%;
+    }
+
+    .port-front {
+        display: none;
+    }
+
+    .port-back {
+        display: block;
+    }
+
+    .more-projects {
+        display: none;
     }
 
     /* About me */
     .connect {
-        background-color: var(--third-clr);
+        display: flex;
+        flex-direction: column;
+        position: relative;
     }
 
-    .about-me h2 {
-        background: var(--prim-clr);
-        padding: 0.5em 0 0.5em;
-        margin: 0.5em;
+    .hire-me {
+        width: 100%;
+        padding: auto;
+        margin: auto;
     }
 
-    .about-me p {
-        font-size: 0.9em;
-        line-height: 1.5em;
-        padding: 1em;
-    }
-
-    .hire-me h2 {
-        background-image: url(../img/body-bg.jpg);
-        background-color: #fff;
-        background-blend-mode: multiply;
-        padding: 0.5em 0 0.5em;
-        margin: 0.5em;
-    }   
-
-    .hire-me a {
-        text-decoration: none;
+    .about-me {
+        width: 100%;
+        padding: auto;
+        margin: 1em auto;
     }
 
     button {

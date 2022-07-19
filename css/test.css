@@ -581,7 +581,7 @@ a {
     }
 
     .hamburger.active .bars:nth-child(1){
-        transform:  translateY(8px) rotate(45deg);
+        transform:  translateY(11px) rotate(45deg);
     }
 
     .hamburger.active .bars:nth-child(3){
@@ -589,12 +589,12 @@ a {
     }
     
     .nav-menu {
-        position: fixed;
+        position: absolute;
         left: -100%;
         top: 50px;
         gap: 0;
         flex-direction: column;
-        background-color: #000000;
+        background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
         text-align: center;
         transition: 0.3s;  

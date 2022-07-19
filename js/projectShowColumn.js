@@ -1,8 +1,6 @@
 var selectorProjects = document.getElementById('project-selection');
 var selectorProjectsValue = document.getElementById('project-selection').value;
 
-selectorProjects.addEventListener('change', getSelectedValue());
-
 function getSelectedValue () {
     
     if(selectorProjectsValue == 'crypto-project') {
@@ -18,3 +16,7 @@ function getSelectedValue () {
         document.getElementById('column2').style.display = 'none';
         document.getElementById('column3').style.display = 'block';
 }}
+
+while (selectorProjects.style.display = 'block') {
+    selectorProjects.addEventListener('change', getSelectedValue());
+}

@@ -701,6 +701,7 @@ ul {
     .column1 {
         display: block;
         width: 92%;
+        border: 1px solid whitesmoke;
     }
 
     .crypto-front {
@@ -714,6 +715,7 @@ ul {
     .column2 {
         display: none;
         width: 92%;
+        border: 1px solid whitesmoke;
     }
 
     .sweet-front {
@@ -727,6 +729,7 @@ ul {
     .column3 {
         display: none;
         width: 92%;
+        border: 1px solid whitesmoke;
     }
 
     .personal-front {

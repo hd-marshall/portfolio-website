@@ -17,6 +17,5 @@ function getSelectedValue () {
         document.getElementById('column3').style.display = 'block';
 }}
 
-while (selectorProjects.style.display = 'block') {
-    selectorProjects.addEventListener('change', getSelectedValue());
-}
+selectorProjects.addEventListener('change', getSelectedValue());
+selectorProjectsValue.console.log()
